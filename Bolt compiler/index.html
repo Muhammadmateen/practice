@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="./bower_components/firebase/firebase.js"></script>
+    <script src="./bower_components/angularfire/dist/angularfire.js"></script>
+
+    <script src="./app.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="ctrl as aa">
+
+    <md-input-container ng-model="aa.user.firstName" aria-label="First Name">
+        <input type="text" ng-model="aa.user.firstName">
+    </md-input-container>
+    <md-input-container ng-model="aa.user.lastName" aria-label="Last Name">
+        <input type="text" ng-model="aa.user.lastName">
+    </md-input-container>
+
+    <md-input-container ng-model="aa.user.email" aria-label="Email Address">
+        <input type="email" ng-model="aa.user.email">
+    </md-input-container>
+
+    <md-button class="md-raised md-primary" ng-click="aa.addUser()">Add</md-button>
+
+    {{aa.dataa}}
+    <br>
+    <br>
+    <md-input-container ng-model="aa.indx" aria-label="Index Number"><input type="text" ng-model="aa.indx">
+    </md-input-container>
+
+
+    <md-button class="md-raised md-primary" ng-click="aa.removeUser()">Remove User</md-button>
+
+    <br>
+    <br><br>
+
+    <li ng-repeat="item in aa.dataa">
+        <input type="text" ng-model="item.email" ng-change="aa.dataa.$save(item)"/>
+    </li>
+
+</div>
+
+
+</body>
+</html>

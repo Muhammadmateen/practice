@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="app.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/contactus/contactus.js"></script>
+
+</head>
+<body ng-app="app">
+
+<!--
+<input type="button" value="Click me" ng-click="ctrl.abc()">
+-->
+<li>
+    <a ui-sref="home">Home</a>
+</li>
+
+<li>
+    <a ui-sref="contactus">Contact Us</a>
+</li>
+
+
+
+
+    <ui-view></ui-view>
+
+
+</body>
+</html>

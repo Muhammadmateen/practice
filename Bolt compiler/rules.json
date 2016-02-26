@@ -1,0 +1,19 @@
+{
+  "rules": {
+    ".write": "data.val() != null && newData.val() == null && data.val() == null && auth != null && (data.val() == null && auth != null || data.val() != null && newData.val() != null && auth != null)",
+    "posts": {
+      "$id": {
+        ".validate": "newData.hasChildren(['message', 'modified']) && newData.child('modified').val() == now",
+        "message": {
+          ".validate": "newData.isString()"
+        },
+        "modified": {
+          ".validate": "newData.isNumber()"
+        },
+        "$other": {
+          ".validate": "false"
+        }
+      }
+    }
+  }
+}

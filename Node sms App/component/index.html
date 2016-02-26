@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular/angular.js"></script>
+
+    <script src="app.js"></script>
+
+
+</head>
+<body ng-app="smsApp" ng-controller="smsApp_controller as sms_ctrl">
+
+    <form>
+        <label>Number :
+            <input type="number" ng-model="sms_ctrl.no">
+        </label>
+
+        <label>
+            Message :
+            <textarea ng-model="sms_ctrl.message">
+
+            </textarea>
+        </label>
+
+        <input type="button" value="Send Sms" ng-click="sms_ctrl.sendSms()">
+    </form>
+
+</body>
+</html>

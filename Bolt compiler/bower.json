@@ -1,0 +1,22 @@
+{
+  "name": "Bolt compiler",
+  "authors": [
+    "Mateen <engr_muhammadmateen@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~1.0.3",
+    "angularfire": "~1.1.3"
+  }
+}

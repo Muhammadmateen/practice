@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular/angular.js"></script>
+
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="indexCtrl as ctrl">
+
+  <form method="post">
+      <label>
+          <input type="text" placeholder="Name" ng-model="ctrl.mail.name">
+      </label>
+
+      <label>
+          <input type="text" placeholder="Email Adress" ng-model="ctrl.mail.email">
+      </label>
+
+      <label>
+          <textarea ng-model="ctrl.mail.message">
+          </textarea>
+      </label>
+
+      <input type="submit" value="Send Email" ng-click="ctrl.sendEmail()">
+
+  </form>
+
+
+</body>
+</html>

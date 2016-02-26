@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script src="angular/angular.js"></script>
+    <script src="./app.js"></script>
+
+
+
+</head>
+<body ng-app="myApp" ng-controller="ctrl as a">
+
+
+    <input type="text" ng-model="a.name">
+
+    <br><br>
+    <input type="submit" value="Add Session" ng-click="a.setSession()">
+
+    <br><br>
+
+
+    <input type="submit" value="Add LocalStorage" ng-click="a.setLocalStorage()">
+    <input type="submit" value="Remove Localstorage" ng-click="a.removeLocalStorage()">
+
+
+</body>
+</html>

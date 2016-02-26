@@ -1,0 +1,89 @@
+
+
+
+
+path / {
+delete() { prior(this) == null && auth != null }
+}
+
+
+
+path / {
+create() {auth != null }
+update() {auth != null }
+}
+
+
+/*
+path /salesman is Saleschema{
+
+write() {true}
+
+}
+
+type Saleschema {
+
+    firstName:String,
+    lastName:String,
+    age:Number,
+
+    contactNo: Number | Null
+}
+
+
+path /sale/{id} is User;
+
+path /purchase{id} is Pur;
+
+type User{
+
+    name:String,
+    age:Number,
+    adress:FullAdress
+
+}
+
+
+type Pur{
+
+    name:String,
+    age:Number,
+    adress:FullAdress
+}
+
+type FullAdress extends String | Number{
+
+    validate() {this.length > 0 && this.length < 40}
+}
+
+
+
+
+
+path /abc {
+
+read() {isCurrentUser(uid)}
+
+}
+
+
+isCurrentUser(id){auth != null && auth.uid == id}*/
+
+
+
+
+path /posts/{id} is Post;
+
+type Post {
+  // Make sure that the only value allowed to be written is now.
+  validate() { this.modified == now }
+
+  message: String,
+  modified: Number
+}
+
+
+
+
+
+initial(value, init) { value == (prior(value) == null ? init : prior(value)) }
